@@ -1,4 +1,4 @@
-# 1,LLaMA-Factory微调
+# LLaMA-Factory微调
 安装项目的依赖包
 ```bash
 pip install -e .
