@@ -9,7 +9,7 @@ cd LLaMA-Factory
 llamafactory-cli webui
 ```
 # llama.cpp量化部署模型
-编译CPP文件
+1.编译CPP文件
 基于CUDA
 ```bash
 cd llama.cpp
@@ -17,16 +17,27 @@ cmake -B build_cuda -DLLAMA_CUDA=ON
 cmake --build build_cuda --config Release -j 12
 ```
 
-转化safetensors模型格式为gguf并量化为Q8_0
+2.转化safetensors模型格式为gguf并量化为Q8_0
 ```bash
 python convert-hf-to-gguf.py  /modelspath/xxx --outfile  /outmodel/modelname-q8_0-v1.gguf --outtype q8_0
 ```
-终端运行gguf格式模型
+3.终端运行gguf格式模型
 ```bash
 cd llama.cpp/build_cuda/bin/
 ./llama-cli -m /modelpath/xxxx.gguf -cov
 ```
-对gguf格式Q8_0模型再量化为Q4_1
+4.开启服务器
+```bash
+./llama-server -m our_model.gguf --port 8080
+
+# Basic web UI can be accessed via browser: http://localhost:8080
+```
+5.用脚本连接服务器
+```bash
+cd tools
+python request1.py
+```
+6.对gguf格式Q8_0模型再量化为Q4_1
 
 ```bash
 cd llama.cpp/build_cuda/bin
