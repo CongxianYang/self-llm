@@ -6,7 +6,7 @@ pip install -e .
 启动可视化终端微调
 ```bash
 cd LLaMA-Factory
-Llamafactoy -cli webui
+llamafactory-cli webui
 ```
 # llama.cpp量化部署模型
 编译CPP文件
