@@ -1,3 +1,4 @@
+#连接开启的服务器
 from openai import OpenAI
 
 # 注意服务端端口，因为是本地，所以不需要api_key
