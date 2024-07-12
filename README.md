@@ -1,14 +1,22 @@
-# LLaMA-Factory微调
-安装项目的依赖包
+# LLaMA-Factory微调🦕
+1.安装项目的依赖包
 ```bash
 pip install -e .
+```
+2.快速微调，推理，导出模型，以Llama3为例子<br><br>
+Tip🌼:不确定的，对于所有“基座”（Base）模型，template 参数可以是 default, alpaca, vicuna 等任意值。<br>
+但“对话”（Instruct/Chat）模型请务必使用对应的模板。请务必在训练和推理时采用完全一致的模板。
+```bash
+llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+llamafactory-cli chat examples/inference/llama3_lora_sft.yaml
+llamafactory-cli export examples/merge_lora/llama3_lora_sft.yaml
 ```
 启动可视化终端微调
 ```bash
 cd LLaMA-Factory
 llamafactory-cli webui
 ```
-# llama.cpp量化部署模型
+# llama.cpp量化部署模型🦕
 1.编译CPP文件
 基于CUDA
 ```bash
