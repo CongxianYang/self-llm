@@ -11,6 +11,9 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "QAdata": {
+    "file_name": "QAdata.json"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
