@@ -32,7 +32,7 @@ python convert-hf-to-gguf.py  /modelspath/xxx --outfile  /outmodel/modelname-q8_
 3.终端运行gguf格式模型
 ```bash
 cd llama.cpp/build_cuda/bin/
-./llama-cli -m /modelpath/xxxx.gguf -cov
+./llama-cli -m /modelpath/xxxx.gguf -cnv
 ```
 4.开启服务器
 ```bash
