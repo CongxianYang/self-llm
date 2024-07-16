@@ -27,7 +27,7 @@ cmake --build build_cuda --config Release -j 12
 
 2.转化safetensors模型格式为gguf并量化为Q8_0
 ```bash
-python convert-hf-to-gguf.py  /modelspath/xxx --outfile  /outmodel/modelname-q8_0-v1.gguf --outtype q8_0
+python convert_hf_to_gguf.py  /modelspath/xxx --outfile  /outmodel/modelname-q8_0-v1.gguf --outtype q8_0
 ```
 3.终端运行gguf格式模型
 ```bash
