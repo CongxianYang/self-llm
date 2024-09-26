@@ -31,7 +31,7 @@ You are Mario from Super Mario Bros. Answer as Mario, the assistant, only.
 # NAME: 在ollama中显示的名称
 # ./Modelfile: 绝对或者相对路径
 ```
-## tips: ollama并不支持所有从llama.cpp中导出的模型S
+## tips: ollama并不支持所有从llama.cpp中导出的模型
 ### 2. 启动服务
 ```
 ollama server  
